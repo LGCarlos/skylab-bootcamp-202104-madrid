@@ -1,0 +1,13 @@
+<p>Lista de tareas para hacer</p>
+
+    <ul *ngIf = 'chores' class= 'list'>
+        <li *ngFor= 'let chore of chores' (click)='getChoreDetails(chore)'>
+            task: {{chore.task}}, Id: {{chore.id}}
+        </li>
+    </ul>
+    <button (click)='addChore($event)'>Add</button>
+    <!-- <button (click)='deleteChore($event)'>Delete</button>
+    <button (click)='editChore($event)'>Create</button> -->
+    <div>
+<app-details></app-details>
+    </div>

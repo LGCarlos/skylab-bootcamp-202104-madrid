@@ -1,0 +1,11 @@
+<p>details works!</p>
+<div>
+    <form #f="ngForm">
+        <select name="state" ngModel>
+          <option value="chore.id" disabled>Choose a chore</option>
+          <option *ngFor="let chore of chores" [ngValue]="chore">
+            {{ chore.id }}
+          </option>
+        </select>
+      </form>
+</div>

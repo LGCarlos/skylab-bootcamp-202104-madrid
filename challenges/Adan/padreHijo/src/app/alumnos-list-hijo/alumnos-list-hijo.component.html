@@ -1,0 +1,5 @@
+<ol>
+    <li *ngFor= 'let item of list' (click)='storeAlumno(item)'>{{item.name}}</li>
+</ol>
+<app-alumno-details *ngIf='alumno' [alumno]= 'alumno' (nota)='getNota($event)'></app-alumno-details>
+<h1>la nota es {{nota}}</h1>
